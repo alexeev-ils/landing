@@ -13,7 +13,7 @@ export default {
     base: './',
     plugins: [
         vituum(),
-        pug({root: '/src',}),
+        pug({ root: '/src', }),
         imports({
             filenamePattern: {
                 'src/styles': '+.sass'
@@ -41,7 +41,7 @@ export default {
             output: {
                 chunkFileNames: 'scripts/[name].js',
                 entryFileNames: 'scripts/[name].js',
-                assetFileNames: ({name}) => {
+                assetFileNames: ({ name }) => {
                     if (/\.css$/.test(name ?? '')) {
                         return '[name][extname]';
                     }

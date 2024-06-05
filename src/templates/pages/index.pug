@@ -1,9 +1,82 @@
 extends  ../layouts/main/layout
 
+
+
 block title
     | SiteTitle
 
 block content
-    include ../sections/top
-    include ../sections/text
+    
+    section.section.section__hero.hero
+        .container 
+            .hero__head 
+                .logo
+                    img(src="/src/assets/icons/logo.svg") 
+                .nav 
+                    .nav__title 
+                        | Есть аккаунт?
+                    .nav__controlls 
+                        .btn 
+                            | Войти
+            .hero__main
+                
+                img(src=logoSrc)
+                img(src="/src/assets/img/hero_decor.svg").hero__decor-img
+                .hero__info
+                    .hero__title 
+                        div(style="text-transform: uppercase") 
+                            | моно
+                        div     
+                            | Управлять арендой - это легко!
+                    .hero__subtitle 
+                        | Все инструменты в одном месте
+                    .hero__controlls
+                        .btn 
+                            | Попробовать сейчас!
+                        .btn-secondary
+                            | 30 ДНЕЙ БЕСПЛАТНО
+    section.section.section__problem.problem
+        .container 
+            .problem__head
+                .problem__title Большиство собственников недвижимости, 
+                .problem__subtitle сдающих объект в аренду, не имеют инструмента для управления процесса.
+            .problem__body  
+                img(src="/src/assets/img/problem_decor.svg", alt="").problem__img
+                .problem__info
+                    .problem__info_title Это приводит:
+                    ul.problem__info_list  
+                        li.problem__info_item к финансовым потерям
+                        li.problem__info_item нарушениям условий договора
+                        li.problem__info_item конфликтам с арендатором
+                        li.problem__info_item ущербу недвижимости
+    section.section.section__present.present
+        .container
+            .present__head
+                .present__info
+                    .present__title Представляем универсальный инструмент для управления недвижимостью
+                    .present__logo 
+                        img(src="/src/assets/img/logo_mono.svg")
+                    .present__actions
+                        .btn Попробовать сейчас!
+                        .present__disclamer 30 ДНЕЙ БЕСПЛАТНО
+                .present__img
+                    img(src="/src/assets/img/present_app.svg")
+            .present__body
+                .cases
+                    ul.cases__list
+                        - 
+                            var cases = [
+                                {iconPath: '/src/assets/img/cases/case_star.svg', desc: 'Создавайте и редактируйте подробный профиль объекта'},
+                                {iconPath: '/src/assets/img/cases/case_renter.svg', desc: 'Подключайте Аренду и контролируйте исполнение условий'},
+                                {iconPath: '/src/assets/img/cases/case_settings.svg', desc: 'Функционал для Управляющего Вашими объектами'},
+                                {iconPath: '/src/assets/img/cases/case_time.svg', desc: 'Сохранение всех событий в созданном объекте'},
+                                {iconPath: '/src/assets/img/cases/case_comments.svg', desc: 'Всегда на связи в едином цифровом пространстве'},
+                            ]
+                        each caseItem in cases
+                            li.cases__item
+                                img(src=caseItem.iconPath).cases__img
+                                .cases__desc= caseItem.desc
+                    img(src='/src/assets/img/cases/cases_images.svg').cases__images  
+                .btn Попробовать сейчас!
 
+                            
