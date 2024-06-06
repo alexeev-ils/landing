@@ -1,5 +1,9 @@
 @import './config/index.scss';
 
+.main {
+    margin-bottom: 100px;
+}
+
 .section__hero {
     // background: url("../assets/icons/hero_background.svg") no-repeat center / cover;
     // background-attachment;
@@ -10,6 +14,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     padding-bottom: 95px;
+}
+
+.section__present {
+    margin-bottom: 150px;
 }
 
 .hero {
@@ -77,12 +85,13 @@
 }
 
 .btn {
+    width: fit-content;
+    min-width: 88px;
     padding: 14px 20px;
     color: #fff;
     background-color: #9795FF;
     border-radius: 50px;
     font-size: 16px;
-    font-weight: 500;
     line-height: 1.14;
     text-align: center;
     cursor: pointer;
@@ -194,6 +203,12 @@
         margin-bottom: 30px;
     }
 
+    &__actions {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     &__disclamer {
         margin-top: 10px;
         font-weight: 700;
@@ -203,5 +218,131 @@
     &__img {
         max-width: 503px;
         width: 100%;
+    }
+}
+
+.cases {
+    margin-bottom: 100px;
+
+    &__list {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__img {
+        margin-bottom: 10px;
+    }
+
+    &__desc {
+        font-size: 16px;
+    }
+}
+
+.tariffs {
+    &__head {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__decor {
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    &__list {
+        margin-bottom: 60px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__item.tariff:not(:last-child) {
+        margin-right: 33px;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    &__disclamer {
+        text-align: center;
+
+        &_text {
+            font-size: 25px;
+            font-weight: 300;
+        }
+    }
+}
+
+.tariff {
+    &__preview {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 55px 50px;
+        border-radius: 10px;
+        margin-bottom: 40px;
+
+        &[data-attr="base"] {
+            background: linear-gradient(rgba(232, 232, 255, 1), rgba(251, 221, 255, 1));
+        }
+
+        &[data-attr="max"] {
+            background: linear-gradient(rgba(251, 246, 206, 1), rgba(219, 202, 251, 1));
+        }
+
+        &[data-attr="optimum"] {
+            background: linear-gradient(rgba(231, 252, 255, 1), rgba(217, 198, 255, 1));
+        }
+    }
+
+
+
+    &__previewImg {
+        max-width: 246px;
+        margin-bottom: 20px;
+    }
+
+    &__name {
+        font-size: 25px;
+        font-weight: 700;
+        color: #7D7BDD;
+    }
+
+    &__title {
+        font-size: 16px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+
+    &__item {
+        font-size: 14px;
+        line-height: 1.4;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        &[data-attr="extra"] {
+            font-size: 12px;
+        }
+
+        &_icon {
+            margin-bottom: 10px;
+        }
+    }
+
+    .item:not(:last-child) {
+        margin-bottom: 10px;
     }
 }
