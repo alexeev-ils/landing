@@ -1,0 +1,27 @@
+.main_layout {
+    margin-bottom: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-top: 20px;
+    z-index: 100;
+    position: relative;
+}
+
+.footer {
+    background-color: #eee;
+    padding: 20px 0;
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .link {
+        color: inherit;
+    }
+}

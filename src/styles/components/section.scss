@@ -1,0 +1,53 @@
+.section {
+    $blur: 30px;
+
+    &__hero {
+        padding-bottom: calc($blur + 20px);
+
+        &:after {
+            content: '';
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            filter: blur($blur);
+            background: linear-gradient(139deg, #F6F0e3, #D8C6FE);
+        }
+    }
+
+    &__problem {
+        margin-bottom: 100px;
+        padding-top: 95px;
+        overflow-x: hidden;
+
+        .decor_stroke_bg_left {
+            position: absolute;
+            right: 96%;
+            top: -53px;
+        }
+
+        .decor_stroke_bg_right {
+            position: absolute;
+            left: 103%;
+            top: 130px;
+        }
+    }
+
+    &__present {
+        margin-bottom: 150px;
+
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 95px;
+            bottom: 265px;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(-55deg, #D9C6FF, #E7FCFF);
+            filter: blur(50px);
+        }
+    }
+
+}

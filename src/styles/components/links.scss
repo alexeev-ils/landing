@@ -1,0 +1,30 @@
+.links {
+    color: #6C6C6C;
+    font-size: 10px;
+    margin-right: 15px;
+    white-space: nowrap;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: -20px;
+
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+    }
+
+    &__item {
+        text-decoration: underline;
+        padding-top: 20px;
+
+        &:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
+
+    &__item-title {
+        padding-top: 20px;
+    }
+
+}

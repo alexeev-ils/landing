@@ -1,0 +1,35 @@
+section.section.section__present
+    .container.present
+        .present__head
+            .present__info
+                .present__title
+                    | Представляем
+                    br
+                    | универсальный инструмент
+                    br
+                    | для управления недвижимостью 
+                .present__logo 
+                    img(src="/src/assets/img/logo_mono.svg")
+                .present__actions
+                    .btn.uppercase Попробовать сейчас!
+                    .present__disclamer.uppercase 30 ДНЕЙ БЕСПЛАТНО
+            .present__img
+                img(src="/src/assets/img/present_app.svg")
+        .present__body
+            .cases
+                ul.cases__list
+                    - 
+                        var cases = [
+                            {iconPath: '/src/assets/img/cases/case_star.svg', desc: 'Создавайте и редактируйте подробный профиль объекта'},
+                            {iconPath: '/src/assets/img/cases/case_renter.svg', desc: 'Подключайте Аренду и контролируйте исполнение условий'},
+                            {iconPath: '/src/assets/img/cases/case_settings.svg', desc: 'Функционал для Управляющего Вашими объектами'},
+                            {iconPath: '/src/assets/img/cases/case_time.svg', desc: 'Сохранение всех событий в созданном объекте'},
+                            {iconPath: '/src/assets/img/cases/case_comments.svg', desc: 'Всегда на связи в едином цифровом пространстве'},
+                        ]
+                    each caseItem in cases
+                        li.cases__item
+                            img(src=caseItem.iconPath).cases__img
+                            .cases__desc= caseItem.desc
+                img(src='/src/assets/img/cases/cases_images.svg').cases__images  
+            .present__actions
+                .btn.uppercase Попробовать сейчас!

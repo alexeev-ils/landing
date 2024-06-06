@@ -86,15 +86,16 @@ textarea {
 }
 
 section {
-    overflow: hidden;
+    // overflow: hidden;
     position: relative;
 }
 
 .container {
+    $paddingX: 10px;
     width: 100%;
-    max-width: 1100px;
+    max-width: calc(1100px + $paddingX*2);
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 $paddingX;
 }
 
 .global_container {

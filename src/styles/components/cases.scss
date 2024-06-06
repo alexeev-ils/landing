@@ -1,0 +1,20 @@
+.cases {
+    margin-bottom: 100px;
+
+    &__list {
+        display: flex;
+        margin-bottom: 50px;
+    }
+
+    &__item:not(:last-child) {
+        margin-right: 30px;
+    }
+
+    &__img {
+        margin-bottom: 10px;
+    }
+
+    &__desc {
+        font-size: 16px;
+    }
+}

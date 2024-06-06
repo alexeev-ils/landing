@@ -1,0 +1,12 @@
+.payments {
+    color: #6C6C6C;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    margin-left: auto;
+
+    &__title {
+        margin-right: 20px;
+    }
+}

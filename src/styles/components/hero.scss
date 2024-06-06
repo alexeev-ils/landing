@@ -1,0 +1,57 @@
+.hero {
+    &__main {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        z-index: 100;
+        position: relative;
+    }
+
+    &__effect {
+        position: absolute;
+        bottom: 110px;
+        width: 100%;
+        left: 0;
+        object-fit: cover;
+        z-index: 50;
+    }
+
+    &__decor-img {
+        max-width: 800px;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        font-size: 50px;
+        font-weight: 700;
+        color: #9795FF;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    &__subtitle {
+        color: #9795FF;
+        margin-bottom: 30px;
+        padding-bottom: 3px;
+        border-bottom: 2px solid #9795FF;
+        font-weight: 700;
+        font-size: 24px;
+    }
+
+    &__controlls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        *:not(:last-child) {
+            margin-bottom: 30px;
+        }
+    }
+}

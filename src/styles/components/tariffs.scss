@@ -1,0 +1,41 @@
+.tariffs {
+    &__head {
+        text-align: center;
+        margin-bottom: 60px;
+    }
+
+    &__decor {
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 25px;
+    }
+
+    &__list {
+        margin-bottom: 60px;
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__item.tariff:not(:last-child) {
+        margin-right: 33px;
+    }
+
+    &__actions {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+
+    &__disclamer {
+        text-align: center;
+
+        &_text {
+            font-size: 25px;
+            font-weight: 300;
+        }
+    }
+}

@@ -1,0 +1,61 @@
+.problem {
+    z-index: 100;
+    position: relative;
+
+    &__head {
+        text-align: center;
+        margin-bottom: 100px;
+        font-size: 25px;
+    }
+
+    &__title {
+        font-weight: 700;
+    }
+
+    &__subtitle {
+        font-weight: 300;
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__img {
+        max-width: 728px;
+        margin-right: 40px;
+    }
+
+    &__info {
+        font-weight: 300;
+        font-size: 20px;
+
+        &_title {
+            margin-bottom: 20px;
+        }
+
+        &_list {
+            list-style-position: outside;
+            padding-left: 20px;
+        }
+
+        &_item {
+            list-style-type: disc;
+            padding-left: 18px;
+            line-height: 1;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+
+            &::marker {
+                color: #9795FF;
+            }
+        }
+
+
+    }
+
+
+}
