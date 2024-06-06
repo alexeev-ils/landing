@@ -1,0 +1,27 @@
+@mixin media($width) {
+    @media (max-width: #{$width}px) {
+        @content;
+    }
+}
+
+@mixin button-style() {
+    width: fit-content;
+    padding: 14px 20px;
+    color: #fff;
+    background-color: #9795FF;
+    border-radius: 50px;
+    font-size: 16px;
+    line-height: 1.14;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .3s;
+    font-weight: 500;
+
+    &:hover {
+        background-color: #8A88F1;
+    }
+
+    &:active {
+        background-color: #7D7BDD;
+    }
+}
