@@ -4,5 +4,10 @@
 
     &__title {
         margin-right: 20px;
+
+        @include media(480) {
+            font-size: 12px;
+            margin-right: 10px;
+        }
     }
 }

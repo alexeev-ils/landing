@@ -7,7 +7,7 @@ section.section.section__hero
                 .nav__title 
                     | Есть аккаунт?
                 .nav__controlls 
-                    .btn 
+                    .header__btn 
                         | Войти
     .container.hero 
         img(src="/src/assets/img/hero_effect.svg", alt="").hero__effect
@@ -16,16 +16,12 @@ section.section.section__hero
             
             img(src=logoSrc)
             img(src="/src/assets/img/hero_decor.svg").hero__decor-img
+            img(src="/src/assets/img/hero_decor_mobile.svg").hero__decor-img--mobile
             .hero__info
-                .hero__title 
-                    div(style="text-transform: uppercase") 
-                        | моно
-                    div     
-                        | Управлять арендой - это легко!
-                .hero__subtitle 
-                    | Все инструменты в одном месте
+                .hero__title
+                    div.uppercase моно
+                    div Управлять арендой - это&nbsp;легко!
+                a(href="#").hero__subtitle Все инструменты в одном месте
                 .hero__controlls
-                    .btn.uppercase
-                        | Попробовать сейчас!
-                    .btn-secondary.uppercase
-                        | 30 дней бесплатно
+                    .btn.uppercase Попробовать сейчас!
+                    a(href="#").hero__btn-secondary.uppercase 30 дней бесплатно

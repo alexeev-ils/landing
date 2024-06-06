@@ -101,4 +101,16 @@ section {
 .global_container {
     width: 100%;
     padding: 0 60px;
+
+    @include media(960) {
+        padding: 0 40px;
+    }
+
+    @include media(768) {
+        padding: 0 20px;
+    }
+
+    @include media(480) {
+        padding: 0 10px;
+    }
 }
