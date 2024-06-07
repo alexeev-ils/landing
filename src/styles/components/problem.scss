@@ -6,6 +6,20 @@
         text-align: center;
         margin-bottom: 100px;
         font-size: 25px;
+
+        @include media (1100) {
+            margin-bottom: 50px;
+        }
+
+        @include media (768) {
+            font-size: 20px;
+            margin-bottom: 38px;
+        }
+
+        @include media (480) {
+            font-size: 18px;
+            margin-bottom: 28px;
+        }
     }
 
     &__title {
@@ -20,16 +34,47 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        @include media (1100) {
+            flex-direction: column;
+        }
     }
 
     &__img {
         max-width: 728px;
         margin-right: 40px;
+
+        @include media (768) {
+            display: none;
+        }
+    }
+
+    &__img-mobile {
+        display: none;
+
+        @include media (768) {
+            display: block;
+        }
     }
 
     &__info {
         font-weight: 300;
         font-size: 20px;
+
+        @include media (1100) {
+            margin-top: 20px;
+        }
+
+        @include media (768) {
+            align-self: flex-start;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        @include media (480) {
+            font-size: 16px;
+
+        }
 
         &_title {
             margin-bottom: 20px;

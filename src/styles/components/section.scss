@@ -21,16 +21,38 @@
         padding-top: 95px;
         overflow-x: hidden;
 
+        @include media(1100) {
+            overflow-x: initial;
+            padding-top: 80px;
+        }
+
+        @include media(768) {
+            padding-top: 60px;
+        }
+
+        @include media(480) {
+            margin-bottom: 83px;
+            padding-top: 57px;
+        }
+
         .decor_stroke_bg_left {
             position: absolute;
             right: 96%;
             top: -53px;
+
+            @include media(1100) {
+                display: none;
+            }
         }
 
         .decor_stroke_bg_right {
             position: absolute;
             left: 100%;
             top: 130px;
+
+            @include media(1100) {
+                display: none;
+            }
         }
     }
 

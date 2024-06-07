@@ -1,4 +1,14 @@
 .hero {
+    @mixin hero-effect-style() {
+        position: absolute;
+
+        width: 100%;
+        left: 0;
+        object-fit: cover;
+        z-index: 50;
+    }
+
+
     &__main {
         display: flex;
         flex-direction: column;
@@ -10,12 +20,23 @@
     }
 
     &__effect {
-        position: absolute;
+        @include hero-effect-style();
+
         bottom: 110px;
-        width: 100%;
-        left: 0;
-        object-fit: cover;
-        z-index: 50;
+
+        @include media(768) {
+            display: none;
+        }
+    }
+
+    &__effect-mobile {
+        @include hero-effect-style();
+
+        top: 35%;
+
+        @include media(768) {
+            display: block;
+        }
     }
 
     &__decor-img {
