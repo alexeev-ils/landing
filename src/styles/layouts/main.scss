@@ -83,3 +83,40 @@
     }
 
 }
+
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10000;
+    background-color: #9795FF;
+    color: #fff;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, transform 0.3s, background-color .3s;
+    opacity: 0.8;
+
+    .scrollToTopBtn-name {
+        margin-right: 10px;
+
+        @include media(768) {
+            display: none;
+        }
+    }
+}
+
+#scrollToTopBtn:hover {
+    background-color: #8A88F1;
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+#scrollToTopBtn:active {
+    transform: scale(0.9);
+    background-color: #7D7BDD;
+}
