@@ -1,7 +1,6 @@
 .hero {
     @mixin hero-effect-style() {
         position: absolute;
-
         width: 100%;
         left: 0;
         object-fit: cover;
@@ -31,7 +30,7 @@
 
     &__effect-mobile {
         @include hero-effect-style();
-
+        display: none;
         top: 35%;
 
         @include media(768) {

@@ -19,10 +19,20 @@
             background: linear-gradient(-55deg, #DBCAFB, #FBF6CE);
         }
 
-        @include media(768) {
-            background: initial;
-            margin-bottom: 35px;
+        &[data-attr="base"],
+        &[data-attr="optimum"],
+        &[data-attr="max"] {
+            @include media(1100) {
+                background: initial;
+                margin-bottom: 5px;
+            }
         }
+
+        @include media(1100) {
+            padding: 0 50px;
+        }
+
+
 
         @include media(480) {
             margin-bottom: 30px;
@@ -31,6 +41,7 @@
 
     &__previewImg {
         max-width: 246px;
+        width: 100%;
         margin-bottom: 20px;
     }
 
@@ -45,8 +56,9 @@
         font-weight: 600;
         margin-bottom: 20px;
 
-        @include media(768) {
-            margin-bottom: 0;
+        @include media(1100) {
+            text-align: center;
+            margin-bottom: 30px;
         }
     }
 

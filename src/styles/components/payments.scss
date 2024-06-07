@@ -3,8 +3,11 @@
     font-size: 10px;
     display: flex;
     align-items: center;
-    white-space: nowrap;
     margin-left: auto;
+
+    @include media(768) {
+        margin-left: 0;
+    }
 
     &__title {
         margin-right: 20px;

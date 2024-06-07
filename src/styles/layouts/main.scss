@@ -2,7 +2,7 @@
     margin-bottom: 100px;
     min-width: 320px;
 
-    @include media(768) {
+    @include media(1100) {
         margin-bottom: 0;
     }
 }
@@ -56,6 +56,10 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+
+        @include media (768) {
+            flex-direction: column;
+        }
     }
 
     .link {
@@ -64,7 +68,7 @@
 }
 
 .mobile_background {
-    @include media (768) {
+    @include media (1100) {
         position: relative;
 
         &::after {

@@ -4,10 +4,19 @@
     margin-right: 15px;
     white-space: nowrap;
 
+    @include media (768) {
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
     &__list {
         display: flex;
         flex-wrap: wrap;
         margin-top: -20px;
+
+        @include media (768) {
+            flex-direction: column;
+        }
 
         &:not(:last-child) {
             margin-bottom: 20px;
@@ -24,6 +33,7 @@
     }
 
     &__item-title {
+        white-space: initial;
         padding-top: 20px;
     }
 
