@@ -7,8 +7,7 @@ section.section.section__hero
                 .nav__title 
                     | Есть аккаунт?
                 .nav__controlls 
-                    .header__btn 
-                        | Войти
+                    a(href="#", data-link='auth').header__btn Войти
     .container.hero 
         img(src="/src/assets/img/hero_effect.svg", alt="").hero__effect
         img(src="/src/assets/img/hero_effect_mobile.svg", alt="").hero__effect-mobile
@@ -22,7 +21,7 @@ section.section.section__hero
                 .hero__title
                     div.uppercase моно
                     div Управлять арендой - это&nbsp;легко!
-                a(href="#").hero__subtitle Все инструменты в одном месте
+                a(href="#", data-link='reg').hero__subtitle Все инструменты в одном месте
                 .hero__controlls
-                    .btn.uppercase Попробовать сейчас!
-                    a(href="#").hero__btn-secondary.uppercase 30 дней бесплатно
+                    a(href="#", data-link='reg').btn.uppercase Попробовать сейчас!
+                    a(href="#", data-link='reg').hero__btn-secondary.uppercase 30 дней бесплатно
