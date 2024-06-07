@@ -1,0 +1,79 @@
+.accordion {
+
+    // start state (close)
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #C7C7C7;
+        color: #c7c7c7;
+        font-size: 16px;
+        cursor: pointer;
+        transition: opacity .3s;
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    .accordion__name {
+        .more {
+            display: block;
+
+        }
+
+        .closed {
+            display: none;
+        }
+    }
+
+    .accordion__img {
+        .plus {
+            display: block;
+
+        }
+
+        .minus {
+            display: none;
+        }
+    }
+
+    .accordion__body {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+        margin-bottom: 10px;
+    }
+
+    // open state
+    &.open {
+        .accordion__name {
+            .more {
+                display: none;
+
+            }
+
+            .closed {
+                display: block;
+            }
+        }
+
+        .accordion__img {
+            .plus {
+                display: none;
+            }
+
+            .minus {
+
+                display: block;
+            }
+        }
+
+        // .accordion__body {
+        //     max-height: 1000px; // рассчитывается в Javascript
+        // }
+
+    }
+}

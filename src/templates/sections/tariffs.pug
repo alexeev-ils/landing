@@ -103,13 +103,33 @@ section.section.section__tariffs
                             img(src=tariff.previewImgPath, alt="").tariff__previewImg
                             .tariff__name= tariff.name
                         .tariff__title= tariff.title
-                        ol.tariff__list
-                            each item in tariff.desc
-                                li.tariff__item(data-attr=item.isExtra ? 'extra' : null)
-                                    img(src=item.iconPath).tariff__item_icon  
-                                    ul.list
-                                        each t in item.text
-                                            li.item= t
+                        .tariff__list
+
+                            each item, index in tariff.desc
+                                if index === 0
+                                    .tariff__item(data-attr=item.isExtra ? 'extra' : null)
+                                        img(src=item.iconPath).tariff__item_icon  
+                                        ul.list
+                                            each t in item.text
+                                                li.item= t
+
+                            .tariff__accordion.accordion
+                                .accordion__body 
+                                    each item, index in tariff.desc
+                                        if index > 0
+                                            .tariff__item(data-attr=item.isExtra ? 'extra' : null)
+                                                img(src=item.iconPath).tariff__item_icon  
+                                                ul.list
+                                                    each t in item.text
+                                                        li.item= t
+                                .accordion__head 
+                                    .accordion__name 
+                                        .more еще ...
+                                        .closed скрыть
+                                    .accordion__img     
+                                        img(src="/src/assets/icons/plus.svg", alt="").plus
+                                        img(src="/src/assets/icons/minus.svg", alt="").minus
+
             .tariffs__actions
                 .btn.uppercase Попробовать сейчас!
             .tariffs__disclamer   
