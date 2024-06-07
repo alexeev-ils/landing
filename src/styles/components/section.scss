@@ -59,7 +59,6 @@
     &__present {
         margin-bottom: 150px;
 
-
         &:after {
             content: "";
             position: absolute;
@@ -69,7 +68,25 @@
             width: 100%;
             background: linear-gradient(-55deg, #D9C6FF, #E7FCFF);
             filter: blur(50px);
+
+            @include media (768) {
+                display: none;
+            }
         }
+
+        @include media(768) {
+            padding-top: 36px;
+            margin-bottom: 120px;
+        }
+
+        @include media(480) {
+            padding-top: 26px;
+            margin-bottom: 100px;
+        }
+    }
+
+    &__tariffs {
+        z-index: 100;
     }
 
 }
