@@ -18,9 +18,16 @@
         &[data-attr="max"] {
             background: linear-gradient(-55deg, #DBCAFB, #FBF6CE);
         }
+
+        @include media(768) {
+            background: initial;
+            margin-bottom: 35px;
+        }
+
+        @include media(480) {
+            margin-bottom: 30px;
+        }
     }
-
-
 
     &__previewImg {
         max-width: 246px;
@@ -37,6 +44,10 @@
         font-size: 16px;
         font-weight: 600;
         margin-bottom: 20px;
+
+        @include media(768) {
+            margin-bottom: 0;
+        }
     }
 
     &__item {
@@ -45,6 +56,10 @@
 
         &:not(:last-child) {
             margin-bottom: 20px;
+
+            @include media(768) {
+                margin-bottom: 10px;
+            }
         }
 
         &[data-attr="extra"] {
