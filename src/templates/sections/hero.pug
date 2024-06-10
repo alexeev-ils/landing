@@ -3,11 +3,11 @@ section.section.section__hero
         .header 
             .logo
                 img(src="/src/assets/icons/logo.svg") 
-            .nav 
-                .nav__title 
-                    | Есть аккаунт?
-                .nav__controlls 
-                    a(href="#", data-link='auth').header__btn Войти
+            //- .nav 
+            //-     .nav__title 
+            //-         | Есть аккаунт?
+            //-     .nav__controlls 
+            //-         a(href="#", data-link='auth').header__btn Войти
     .container.hero 
         img(src="/src/assets/img/hero_effect.svg", alt="").hero__effect
         img(src="/src/assets/img/hero_effect_mobile.svg", alt="").hero__effect-mobile
@@ -23,5 +23,9 @@ section.section.section__hero
                     div Управлять арендой - это&nbsp;легко!
                 a(href="#", data-link='reg').hero__subtitle Все инструменты в одном месте
                 .hero__controlls
-                    a(href="#", data-link='reg').btn.uppercase Попробовать сейчас!
-                    a(href="#", data-link='reg').hero__btn-secondary.uppercase 30 дней бесплатно
+                    a(href="#", data-link='reg', id="openPopup").btn.uppercase
+                        // | Попробовать сейчас!
+                        | Уведомить о старте
+                    a(href="#", data-link='reg').hero__btn-secondary.uppercase 
+                        // | 30 дней бесплатно
+                        | Релиз в июле

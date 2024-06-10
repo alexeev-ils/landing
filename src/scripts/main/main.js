@@ -79,6 +79,105 @@ function setLinks() {
     updateHref('[data-link="auth"]', links.auth);
 }
 
-setLinks();
+const popupOverlay = document.getElementById('popupOverlay');
+const popup = popupOverlay.querySelector('.popup');
+
+function openPopup() {
+    document.addEventListener('DOMContentLoaded', function () {
+        const openPopupBtns = document.querySelectorAll('[data-link="reg"]');
+        const closeBtn = popupOverlay.querySelector('.close');
+        openPopupBtns.forEach((btn) => {
+            btn.addEventListener('click', function (e) {
+                e.preventDefault();
+                popupOverlay.classList.add('show');
+                popup.classList.add('show');
+            });
+        });
+
+        popupOverlay.addEventListener('click', function (e) {
+            if (e.target === popupOverlay || e.target === closeBtn) {
+                popupOverlay.classList.remove('show');
+                popup.classList.remove('show');
+            }
+        });
+    });
+
+}
+
+function sendEmail() {
+    document.addEventListener('DOMContentLoaded', function () {
+        const form = document.querySelector('#emailForm');
+        const emailInput = form.querySelector('#email');
+        const emailError = form.querySelector('#emailError');
+        const responseMessage = document.getElementById('responseMessage');
+        const btn = form.querySelector('button[type=submit]');
+
+        emailInput.addEventListener('input', () => {
+            emailError.textContent = '';
+            btn.removeAttribute('disabled')
+        })
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            // Clear previous error message
+            emailError.textContent = '';
+
+            // Basic email validation
+            const email = emailInput.value;
+            const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+                emailError.textContent = 'Введите корректный email адрес.';
+                btn.setAttribute('disabled', true)
+                return;
+            }
+
+            if (email.length >= 50) {
+                emailError.textContent = 'Введенный email превышает ограничение длины - 50 символов';
+                btn.setAttribute('disabled', true)
+                return;
+            }
+
+            try {
+                btn.setAttribute('disabled', true)
+                const response = await fetch('https://server-endpoint.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email })
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    responseMessage.textContent = 'Данные успешно отправлены! Мы сообщим вам о старте проекта';
+                    responseMessage.style.color = 'green';
+                    email = '';
+                    setTimeout(() => {
+                        popupOverlay.classList.remove('show');
+                        popup.classList.remove('show');
+                    }, 2000)
+                } else {
+                    responseMessage.textContent = `Ошибка: ${result.message}`;
+                    responseMessage.style.color = 'red';
+                }
+                btn.removeAttribute('disabled')
+            } catch (error) {
+                responseMessage.textContent = 'Произошла ошибка при отправке данных. Попробуйте позже';
+                responseMessage.style.color = 'red';
+                btn.removeAttribute('disabled')
+            }
+        });
+    });
+}
+
+// pred reliz
+openPopup();
+sendEmail();
+
+// setLinks();
+
 scrollToTopBtn();
 accordion();

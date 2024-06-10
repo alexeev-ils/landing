@@ -1,21 +1,21 @@
 footer.footer
     .global_container.footer__container 
-        .links 
-            ul.links__list
-                - 
-                    var links = [
-                        {name: 'Пользовательское соглашение', href: '#'},
-                        {name: 'Правила защиты информации о пользователях', href: '#'},
-                        {name: 'Публичная оферта', href: '#'},
-                        {name: 'Посмотреть все документы', href: '#'},
-                    ]
-                each link in links 
-                    li.links__item 
-                        a(href= link.href, target="_blank", rel="noopener noreferrer").link= link.name 
-            ul.links__list
-                li.links__item 
-                    a(href="#", target="_blank", rel="noopener noreferrer").link Разработка ilsi.pro 
-                li.links__item-title Свидетельство о государственной регистрации программы № 2024616005
+        //- .links 
+        //-     ul.links__list
+        //-         - 
+        //-             var links = [
+        //-                 {name: 'Пользовательское соглашение', href: '#'},
+        //-                 {name: 'Правила защиты информации о пользователях', href: '#'},
+        //-                 {name: 'Публичная оферта', href: '#'},
+        //-                 {name: 'Посмотреть все документы', href: '#'},
+        //-             ]
+        //-         each link in links 
+        //-             li.links__item 
+        //-                 a(href= link.href, target="_blank", rel="noopener noreferrer").link= link.name 
+        //-     ul.links__list
+        //-         li.links__item 
+        //-             a(href="#", target="_blank", rel="noopener noreferrer").link Разработка ilsi.pro 
+        //-         li.links__item-title Свидетельство о государственной регистрации программы № 2024616005
         .payments
             .payments__title Принимаем к оплате
             img(src='/src/assets/img/HorizontalLogosPayments.svg', alt='Способы оплаты тарифов Mono').payments__img

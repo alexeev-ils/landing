@@ -1,0 +1,10 @@
+.form_notification {
+    &>*:not(:last-child) {
+        margin-bottom: 15px;
+    }
+
+    button[disabled] {
+        opacity: .5;
+        cursor: no-drop;
+    }
+}

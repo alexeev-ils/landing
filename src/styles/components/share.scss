@@ -11,3 +11,27 @@
 .uppercase {
     text-transform: uppercase
 }
+
+.input {
+    color: #9795FF;
+    border: 1px solid #9795FF;
+    border-radius: 5px;
+    padding: 15px 10px;
+
+    &:hover {
+        color: #8A88F1;
+        border-color: #8A88F1;
+    }
+
+    &:focus {
+        color: #7D7BDD;
+        border-color: #7D7BDD;
+    }
+}
+
+.error {
+    display: block;
+    color: red;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
