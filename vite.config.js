@@ -39,19 +39,19 @@ export default {
                 './src/assets/**/*.{svg,png,jpeg,jpg,webp,webm,mp4,mp3,webp,webm,woof,woof2,ttf}',
             ],
             output: {
-                chunkFileNames: 'scripts/[name].js',
-                entryFileNames: 'scripts/[name].js',
+                chunkFileNames: 'landing/js/[name].js',
+                entryFileNames: 'landing/js/[name].js',
                 assetFileNames: ({ name }) => {
                     if (/\.css$/.test(name ?? '')) {
-                        return '[name][extname]';
+                        return 'landing/css/[name][extname]';
                     }
                     if (/\.(webp|png|jpg|jpeg|gif|ico|svg)$/.test(name ?? '')) {
-                        return 'assets/img/[name][extname]';
+                        return 'landing/img/[name][extname]';
                     }
                     if (/\.(woff|woff2|ttf)$/.test(name ?? '')) {
-                        return 'assets/fonts/[name][extname]';
+                        return 'landing/fonts/[name][extname]';
                     }
-                    return 'assets/[name][extname]'
+                    return 'landing/[name][extname]'
                 },
             }
 
