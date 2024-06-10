@@ -41,22 +41,22 @@ function accordion() {
         const head = acco.querySelector('.accordion__head');
         const body = acco.querySelector('.accordion__body');
 
-        let isOpen = acco.classList.contains('open')
+        let isOpen = acco.classList.contains('open');
 
         head.addEventListener('click', () => {
             if (isOpen) {
                 acco.classList.remove('open');
                 body.style.maxHeight = 0 + "px";
-
+                body.style.opacity = 0;
                 isOpen = !isOpen;
             } else {
                 acco.classList.add('open');
                 body.style.maxHeight = body.scrollHeight + "px";
+                body.style.opacity = 1;
                 isOpen = !isOpen;
             }
-        })
-
-    })
+        });
+    });
 }
 
 function getLinksByDevice(breakpoint) {
