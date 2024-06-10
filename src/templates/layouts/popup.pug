@@ -5,7 +5,7 @@
         .popup__subtitle Введите свой email, и вам одному из первых поступит ссылка на регистрацию в приложении
         .popup__content
             form(id="emailForm").form_notification
-                input.input(type="email", max-length=10, id="email", name="email", placeholder='Введите email', required)
+                input.input(type="email", id="email", name="email", placeholder='Введите email', required)
                 <span id="emailError" class="error"></span>
                 button.btn(type="submit")  Отправить
             <div id="responseMessage" style="margin-top: 10px"></div>
