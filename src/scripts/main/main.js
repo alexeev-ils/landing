@@ -11,6 +11,18 @@ function throttle(func, delay) {
     };
 }
 
+function getLinksByDevice(breakpoint) {
+    const isMobile = window.innerWidth <= breakpoint;
+    const DOMEN = isMobile ? `${location.origin}/` : 'http://dev.mono.re:81/';
+
+    return {
+        auth: DOMEN + (isMobile ? "Account/Login" : "login"),
+        reg: DOMEN + (isMobile ? "Account/Register" : "register"),
+    };
+}
+
+// components logic
+
 //scrollToTopBtn
 function scrollToTopBtn() {
     const scrollToTopBtn = document.getElementById('scrollToTopBtn');
@@ -59,16 +71,6 @@ function accordion() {
     });
 }
 
-function getLinksByDevice(breakpoint) {
-    const isMobile = window.innerWidth <= breakpoint;
-    const DOMEN = isMobile ? "https://test.mono.re/" : "http://dev.mono.re:81/";
-
-    return {
-        auth: DOMEN + (isMobile ? "Account/Login" : "login"),
-        reg: DOMEN + (isMobile ? "Account/Register" : "register"),
-    };
-}
-
 function setLinks() {
     const links = getLinksByDevice(768);
     const updateHref = (selector, url) => {
@@ -78,6 +80,8 @@ function setLinks() {
     updateHref('[data-link="reg"]', links.reg);
     updateHref('[data-link="auth"]', links.auth);
 }
+
+// popup & form email
 
 const popupOverlay = document.getElementById('popupOverlay');
 const popup = popupOverlay.querySelector('.popup');
