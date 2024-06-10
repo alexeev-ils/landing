@@ -2,8 +2,30 @@ meta(charset="UTF-8")
 meta(name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no")
 meta(name="format-detection" content="telephone=no")
 meta(http-equiv="X-UA-Compatible" content="ie=edge")
+meta(name="yandex-verification" content="5c63ea25185f7f43") 
 link(rel="icon" type="image/png" href="/path/to/favicon.png")
 link(rel="shortcut icon" href="/src/assets/icons/favicon.ico")
+link(rel="manifest" href="/manifest.webmanifest")
+
+meta(property="og:locale" content="ru_RU")
+meta(property="og:title" content="Mono - Управление арендой недвижимости легко и удобно")
+meta(property="og:site_name" content="Mono")
+meta(property="og:type" content="website")
+meta(property="og:description" content="Mono - универсальный инструмент для управления арендой недвижимости. Все функции в одном месте")
+meta(property="og:image"
+    content="/landing/favicon/icon-1200x630.png")
+meta(property="og:image:width" content="1200")
+meta(property="og:image:height" content="630")
+<!-- Если SPA, то необходимо передавать динамический url страницы, либо удалить метатег -->
+meta(property="og:url" content="http://mono.re/")
+//- <!-- Если нужно указать автора странички (актуально для блога, постов, статей) -->
+//- meta(property="article:author" content="None")
+//- <!-- Если нужно указать автора странички (актуально для блога, постов, статей) -->
+//- meta(property="article:publisher" content="None")
 
 title
-  block title
+  block meta_title
+    | Mono - Управление арендой недвижимости легко и удобно
+
+block meta_description
+  meta(name="description" content="Mono - универсальный инструмент для управления арендой недвижимости. Все функции в одном месте") 

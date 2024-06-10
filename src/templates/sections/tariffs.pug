@@ -6,14 +6,14 @@
             previewImgPath: '/src/assets/img/tariffs/tariff_base.svg',
             type: 'base',
             desc: [
-                {iconPath: '/src/assets/icons/real_estate.svg', text: [
+                {iconPath: '/src/assets/icons/real_estate.svg', alt: 'Обьект недвижимости', text: [
                     "Возможность создать один объект недвижимости*",
                     "Возможность создания одной аренды сроком до 12 месяцев**"
                 ]},
-                {iconPath: '/src/assets/icons/counters.svg', text: [
+                {iconPath: '/src/assets/icons/counters.svg', alt: 'показания счетчиков недвижимости', text: [
                     "Возможность создания счетчиков, уведомлений о внесении показаний и платежных днях",
                 ]},
-                {iconPath: '/src/assets/icons/done.svg', text: [
+                {iconPath: '/src/assets/icons/done.svg', alt: 'согласование ремонта', text: [
                     "Создание, редактирование, согласование ремонтов",
                     "Добавление, удаление, просмотр документов",
                     "Просмотр событий на Объекте",
@@ -22,7 +22,7 @@
                     "Функционал календаря",
                     "Подключение платных услуг",
                 ]},
-                {iconPath: '/src/assets/icons/extra.svg', text: [
+                {iconPath: '/src/assets/icons/extra.svg', alt: 'прочее', text: [
                     "*Удаление единственного объекта недвижимости ведет к невозможности создания новых.",
                     "**Создание дочерней аренды не может превышать срок родительской аренды."
                 ], isExtra: true },
@@ -34,15 +34,15 @@
             previewImgPath: '/src/assets/img/tariffs/tariff_base.svg',
             type: 'optimum',
             desc: [
-                {iconPath: '/src/assets/icons/real_estate.svg', text: [
+                {iconPath: '/src/assets/icons/real_estate.svg', alt: 'Обьект недвижимости', text: [
                     "Возможность создавать до трех объектов недвижимости одновременно*",
                     "Неограниченное количество аренд на созданные объекты"
                 ]},
-                {iconPath: '/src/assets/icons/counters.svg', text: [
+                {iconPath: '/src/assets/icons/counters.svg', alt: 'показания счетчиков недвижимости', text: [
                     "Возможность создания счетчиков, уведомлений о внесении показаний и платежных днях",
                     "Прикрепление фото к показаниям счетчиков",
                 ]},
-                {iconPath: '/src/assets/icons/done.svg', text: [
+                {iconPath: '/src/assets/icons/done.svg', alt: 'согласование ремонта', text: [
                     "Создание, редактирование, согласование ремонтов",
                     "Добавление, удаление, просмотр документов",
                     "Просмотр событий на Объекте",
@@ -51,7 +51,7 @@
                     "Функционал календаря",
                     "Подключение платных услуг",
                 ]},
-                {iconPath: '/src/assets/icons/extra.svg', text: [
+                {iconPath: '/src/assets/icons/extra.svg', alt: 'прочее', text: [
                     "*Объекты можно удалять и создавать новые, но в моменте не может быть более трех созданных объектов.",
                 ], isExtra: true},
             ]
@@ -62,18 +62,18 @@
             previewImgPath: '/src/assets/img/tariffs/tariff_max.svg',
             type: 'max',
             desc: [
-                {iconPath: '/src/assets/icons/real_estate.svg', text: [
+                {iconPath: '/src/assets/icons/real_estate.svg', alt: 'Обьект недвижимости', text: [
                     "Возможность создавать до десяти объектов недвижимости одновременно*",
                     "Неограниченное количество аренд на созданные объекты",
                     "Подключение Управляющего",
                     "Создание объекта сверх пакета за дополнительную плату",
                 ]},
-                {iconPath: '/src/assets/icons/counters.svg', text: [
+                {iconPath: '/src/assets/icons/counters.svg', alt: 'показания счетчиков недвижимости',  text: [
                     "Возможность создания счетчиков, уведомлений о внесении показаний и платежных днях",
                     "Прикрепление фото к показаниям счетчиков",
                     "Передача показаний счетчиков в Управляющую компанию по email*",
                 ]},
-                {iconPath: '/src/assets/icons/done.svg', text: [
+                {iconPath: '/src/assets/icons/done.svg', alt: 'согласование ремонта', text: [
                     "Создание, редактирование, согласование ремонтов",
                     "Добавление, удаление, просмотр документов",
                     "Просмотр событий на Объекте",
@@ -82,7 +82,7 @@
                     "Функционал календаря",
                     "Подключение платных услуг",
                 ]},
-                {iconPath: '/src/assets/icons/extra.svg', text: [
+                {iconPath: '/src/assets/icons/extra.svg', alt: 'прочее', text: [
                     "*Объекты можно удалять и создавать новые, но одновременно не может быть более десяти созданных объектов.",
                     "** Если УК поддерживает функционал передачи показаний счетчиков по email",
                 ], isExtra: true},
@@ -93,14 +93,14 @@
 section.section.section__tariffs
     .container.tariffs
         .tariffs__head
-            img(src="/src/assets/img/tariffs/tariffs__decor.svg", alt="").tariffs__decor
-            .tariffs__title Выбирайте подходящий тариф для комфортной работы
+            .tariffs__decor
+            h4.tariffs__title Выбирайте подходящий тариф для комфортной работы
         .tariffs__body
             ul.tariffs__list
                 each  tariff in tariffs
                     li.tariffs__item.tariff
                         .tariff__preview(data-attr= tariff.type)
-                            img(src=tariff.previewImgPath, alt="").tariff__previewImg
+                            img(src=tariff.previewImgPath, alt=`${tariff.name} тариф моно` loading="lazy").tariff__previewImg
                             .tariff__name= tariff.name
                         .tariff__title= tariff.title
                         .tariff__list
@@ -108,7 +108,7 @@ section.section.section__tariffs
                             each item, index in tariff.desc
                                 if index === 0
                                     .tariff__item(data-attr=item.isExtra ? 'extra' : null)
-                                        img(src=item.iconPath).tariff__item_icon  
+                                        img(src=item.iconPath, alt=item.alt loading="lazy").tariff__item_icon  
                                         ul.list
                                             each t in item.text
                                                 li.item= t
@@ -118,7 +118,7 @@ section.section.section__tariffs
                                     each item, index in tariff.desc
                                         if index > 0
                                             .tariff__item(data-attr=item.isExtra ? 'extra' : null)
-                                                img(src=item.iconPath).tariff__item_icon  
+                                                img(src=item.iconPath, alt=item.alt loading="lazy").tariff__item_icon  
                                                 ul.list
                                                     each t in item.text
                                                         li.item= t
@@ -127,15 +127,15 @@ section.section.section__tariffs
                                         .more еще ...
                                         .closed скрыть
                                     .accordion__img     
-                                        img(src="/src/assets/icons/plus.svg", alt="").plus
-                                        img(src="/src/assets/icons/minus.svg", alt="").minus
+                                        .plus
+                                        .minus
 
             .tariffs__actions
-                a(href="#", data-link='reg').btn.uppercase
+                a(href="#", data-link='reg', rel="nofollow").btn.uppercase
                     // | Попробовать сейчас!
                     | Уведомить о старте
             .tariffs__disclamer   
-                .tariffs__title 30 дней бесплатно на весь функционал!
+                h4.tariffs__title 30 дней бесплатно на весь функционал!
                 p.tariffs__disclamer_text 
                     | С момента регистрации у Вас будет возможность использовать функционал платформы в полном объеме. Узнав все возможности МОНО, Вы сможете выбрать наиболее      подходящий тариф после окончания бесплатного периода
 

@@ -1,17 +1,21 @@
 section.section.section__problem
     .container.problem
-        img(src="/src/assets/img/background_stroke.svg", alt="").decor_stroke_bg_left
-        img(src="/src/assets/img/background_stroke.svg", alt="right").decor_stroke_bg_right
+        .decor_stroke_bg_left
+        .decor_stroke_bg_right
         .problem__head
-            .problem__title Большиство собственников недвижимости, 
-            .problem__subtitle сдающих объект в аренду, не имеют инструмента для управления процесса.
+            h2.problem__title Большиство собственников недвижимости, 
+            p.problem__subtitle сдающих объект в аренду, не имеют инструмента для управления процесса.
         .problem__body  
-            img(src="/src/assets/img/problem_decor.svg", alt="").problem__img
-            img(src="/src/assets/img/problem_decor_mobile.svg", alt="").problem__img-mobile
+            img(src="/src/assets/img/problem_decor.svg", alt="Проблемы собственников недвижимости, сдающих объект в аренду" loading="lazy" ).problem__img
+            img(src="/src/assets/img/problem_decor_mobile.svg", alt="Проблемы собственников недвижимости, сдающих объект в аренду" loading="lazy").problem__img-mobile
             .problem__info
-                .problem__info_title Это приводит:
+                h3.problem__info_title Это приводит:
                 ul.problem__info_list  
-                    li.problem__info_item к финансовым потерям
-                    li.problem__info_item нарушениям условий договора
-                    li.problem__info_item конфликтам с арендатором
-                    li.problem__info_item ущербу недвижимости
+                    li.problem__info_item к 
+                        strong финансовым потерям
+                    li.problem__info_item
+                        strong нарушениям условий договора
+                    li.problem__info_item
+                        em конфликтам с арендатором
+                    li.problem__info_item= "ущербу "  
+                        strong недвижимости

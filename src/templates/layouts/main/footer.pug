@@ -11,11 +11,11 @@ footer.footer
         //-             ]
         //-         each link in links 
         //-             li.links__item 
-        //-                 a(href= link.href, target="_blank", rel="noopener noreferrer").link= link.name 
+        //-                 a(href= link.href, target="_blank", rel="noopener noreferrer nofollow").link= link.name 
         //-     ul.links__list
         //-         li.links__item 
-        //-             a(href="#", target="_blank", rel="noopener noreferrer").link Разработка ilsi.pro 
+        //-             a(href="#", target="_blank", rel="noopener noreferrer nofollow").link Разработка ilsi.pro 
         //-         li.links__item-title Свидетельство о государственной регистрации программы № 2024616005
         .payments
             .payments__title Принимаем к оплате
-            img(src='/src/assets/img/HorizontalLogosPayments.svg', alt='Способы оплаты тарифов Mono').payments__img
+            img(src='/src/assets/img/HorizontalLogosPayments.svg', alt='Способы оплаты тарифов Mono' loading="lazy").payments__img

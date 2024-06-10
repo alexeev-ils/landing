@@ -2,30 +2,29 @@ section.section.section__hero
     .global_container
         .header 
             .logo
-                img(src="/src/assets/icons/logo.svg") 
+                img(src="/src/assets/icons/logo.svg", alt='Моно логотип') 
             //- .nav 
             //-     .nav__title 
             //-         | Есть аккаунт?
             //-     .nav__controlls 
-            //-         a(href="#", data-link='auth').header__btn Войти
+            //-         a(href="#", data-link='auth', rel="nofollow").header__btn Войти
     .container.hero 
-        img(src="/src/assets/img/hero_effect.svg", alt="").hero__effect
-        img(src="/src/assets/img/hero_effect_mobile.svg", alt="").hero__effect-mobile
+        img(src="/src/assets/img/hero_effect.svg", alt='').hero__effect
+        img(src="/src/assets/img/hero_effect_mobile.svg", alt='').hero__effect-mobile
         
         .hero__main
             
-            img(src=logoSrc)
-            img(src="/src/assets/img/hero_decor.svg").hero__decor-img
-            img(src="/src/assets/img/hero_decor_mobile.svg").hero__decor-img--mobile
+            img(src="/src/assets/img/hero_decor.svg", alt="моно - управление недвижимостью в одном месте").hero__decor-img
+            img(src="/src/assets/img/hero_decor_mobile.svg", alt="моно - управление недвижимостью в одном месте").hero__decor-img--mobile
             .hero__info
                 .hero__title
                     div.uppercase моно
-                    div Управлять арендой - это&nbsp;легко!
-                a(href="#", data-link='reg').hero__subtitle Все инструменты в одном месте
+                    h1 Управлять арендой - это&nbsp;легко!
+                a(href="#", data-link='reg', rel="nofollow").hero__subtitle Все инструменты в одном месте
                 .hero__controlls
-                    a(href="#", data-link='reg', id="openPopup").btn.uppercase
+                    a(href="#", data-link='reg', id="openPopup", rel="nofollow").btn.uppercase
                         // | Попробовать сейчас!
                         | Уведомить о старте
-                    a(href="#", data-link='reg').hero__btn-secondary.uppercase 
+                    a(href="#", data-link='reg', rel="nofollow").hero__btn-secondary.uppercase 
                         // | 30 дней бесплатно
                         | Релиз в июле

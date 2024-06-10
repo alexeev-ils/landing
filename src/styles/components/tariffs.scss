@@ -17,6 +17,10 @@
     }
 
     &__decor {
+        display: inline-block;
+        background-image: url("/src/assets/img/tariffs/tariffs__decor.svg");
+        width: 102px;
+        height: 31px;
         margin-bottom: 60px;
 
         @include media(768) {

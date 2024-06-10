@@ -1,43 +1,43 @@
 - 
     var cases = [
-        {iconPath: '/src/assets/img/cases/case_star.svg', desc: 'Создавайте и редактируйте подробный профиль объекта'},
-        {iconPath: '/src/assets/img/cases/case_renter.svg', desc: 'Подключайте Аренду и контролируйте исполнение условий'},
-        {iconPath: '/src/assets/img/cases/case_settings.svg', desc: 'Функционал для Управляющего Вашими объектами'},
-        {iconPath: '/src/assets/img/cases/case_time.svg', desc: 'Сохранение всех событий в созданном объекте'},
-        {iconPath: '/src/assets/img/cases/case_comments.svg', desc: 'Всегда на связи в едином цифровом пространстве'},
+        {iconPath: '/src/assets/img/cases/case_star.svg', desc: '<strong>Создавайте и редактируйте</strong> подробный <strong>профиль объекта</strong>', alt: "Подробный профиль объекта"},
+        {iconPath: '/src/assets/img/cases/case_renter.svg', desc: '<strong>Подключайте Аренду</strong> и <strong>контролируйте исполнение условий</strong>', alt: "Контроль аренды"},
+        {iconPath: '/src/assets/img/cases/case_settings.svg', desc: '<strong>Функционал для Управляющего</strong> Вашими объектами', alt: "Функционал для управляющего"},
+        {iconPath: '/src/assets/img/cases/case_time.svg', desc: '<strong>Сохранение всех событий</strong> в <em>созданном объекте</em>', alt: "Сохранение событий"},
+        {iconPath: '/src/assets/img/cases/case_comments.svg', desc: 'Всегда на связи в едином цифровом пространстве', alt: "Единое цифровое пространство"},
     ]
 
 section.section.section__present
     .container.present
         .present__head
             .present__info
-                .present__title
+                h3.present__title
                     | Представляем
                     br
                     | универсальный инструмент
                     br
                     | для управления недвижимостью 
                 .present__logo 
-                    img(src="/src/assets/img/logo_mono.svg")
+                    img(src="/src/assets/img/logo_mono.svg", alt="Моно логотип" loading="lazy")
                 .present__actions.present__actions--desctop
-                    a(href="#", data-link='reg').btn.uppercase 
+                    a(href="#", data-link='reg', rel="nofollow").btn.uppercase 
                         // | Попробовать сейчас!
                         | Уведомить о старте
                     .present__disclamer.uppercase
                         // | 30 дней бесплатно
                         | Релиз в июле
             .present__img
-                img(src="/src/assets/img/present_app.png")
+                img(src="/src/assets/img/present_app.png", alt="Приложение Моно" loading="lazy")
         .present__body
             .cases
                 ul.cases__list
                     each caseItem in cases
                         li.cases__item
-                            img(src=caseItem.iconPath).cases__img
-                            .cases__desc= caseItem.desc
-                img(src='/src/assets/img/cases/cases_images.svg').cases__images  
+                            img(src=caseItem.iconPath, alt=caseItem.alt).cases__img
+                            .cases__desc!= caseItem.desc
+                img(src='/src/assets/img/cases/cases_images.svg', alt="Скриншоты приложения моно" loading="lazy").cases__images  
             .present__actions
-                a(href="#", data-link='reg').btn.uppercase
+                a(href="#", data-link='reg', rel="nofollow").btn.uppercase
                     // | Попробовать сейчас!
                     | Уведомить о старте
                 .present__disclamer.present__disclamer--mobile.uppercase 

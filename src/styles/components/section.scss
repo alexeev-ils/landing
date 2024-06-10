@@ -17,6 +17,18 @@
     }
 
     &__problem {
+
+        @mixin decor_stroke_decor {
+            background-image: url('/src/assets/img/background_stroke.svg');
+            width: 529px;
+            height: 533px;
+            position: absolute;
+
+            @include media(1100) {
+                display: none;
+            }
+        }
+
         margin-bottom: 100px;
         padding-top: 95px;
         overflow-x: hidden;
@@ -36,23 +48,17 @@
         }
 
         .decor_stroke_bg_left {
-            position: absolute;
+            @include decor_stroke_decor;
             right: 96%;
             top: -53px;
 
-            @include media(1100) {
-                display: none;
-            }
+
         }
 
         .decor_stroke_bg_right {
-            position: absolute;
+            @include decor_stroke_decor;
             left: 100%;
             top: 130px;
-
-            @include media(1100) {
-                display: none;
-            }
         }
     }
 
