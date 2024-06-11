@@ -1,56 +1,19 @@
-# Vite + Pug + Sass boilerplate
+# Vite + Pug + Sass
 
-## Project setup
-```
-npm install
-```
+## Для запуска сборки:
 
-### Compiles and hot-reloads for development
-```
-npm run dev
-```
+1. npm install
+2. npm start - для разработки
+3. npm run build - для сборки в prod (хостится сайт в другом проекте - mono)
 
-### Compiles and minifies for production
-```
-npm run build
-```
+### Особенности сборки:
+- JavaScript - сборка генерирует ES6 синтаксис, с поддержкой es modules через polifills (создает файл modulepreload-polyfill.js для prod)
+- В исходниках (в файлах внутри папки src) - в pug файлах указываем пути от корня проекта /src/…(в вайлах для prod сборка заменяет все эти пути на те которые нужно серверу -  /landing/…). Исключения состоавляют специфические случаи , например - (<link rel="manifest" href="/manifest.webmanifest" >) использования html в pug, который не должен преобразовываться
+- На будущее предусмотрена генерация других html страниц, помимо index.html
 
-### Check compiled and minifies production version
-```
-npm run build
-```
-
-### Src and hrefs
-  All src and hrefs(like images, scripts and styles) in .pug files must begining from /src ...
-
-### scripts and css
-  You can import all scripts in /src/scripts/app.js and call it in your layout.pug
-  layout.pug :
-  ```
- html(lang="ru")
-  head
-    link(rel="stylesheet" href="/src/styles/app.sass")
-    script(type='module' src="/src/scripts/app.js")
-  ```
-### svg and images
-
-Your pug file:
-```
-#svg
-header.header
-    .container
-        .header__container
-            .header__top
-                |copyright
-            .header__bottom
-                .header__logo
-                    include ../../../assets/img/header/vite.svg  <----svg 
-
-
-#image
-section.top
-    .container
-        h1.section-title Vituum + Pug Template
-        .top__content
-            img(src="/src/assets/img/top/Vituum.png")
-```
+##### По сборке осталось доделать:
+- Добавить нормальные соурсмапы;
+- Генерация hash файлов (css,js, media)
+- пофиксить баг падающей сборки - `node:events:495 throw er; // Unhandled 'error' event Error: EBUSY: resource busy or locked, lstat 'C:\DumpStack.log.tmp'`
+- В случае расширения сайта (добавления новых страниц) - подумать над изоляцией scss компонентов. В <head > через include head ?
+- Добавить авто-сжатие картинок и иконок без потери качества
