@@ -6,8 +6,7 @@
   "scripts": {
     "start": "vite --host --port 8000",
     "build": "vite build",
-    "preview": "vite preview --host --port 8000",
-    "tunnel": "lt --port 8000"
+    "preview": "vite preview --host --port 8000"
   },
   "devDependencies": {
     "@vituum/vite-plugin-pug": "^1.1.0",
@@ -16,7 +15,12 @@
     "vituum": "^1.1.0"
   },
   "dependencies": {
-    "localtunnel": "^2.0.2",
-    "tunnel": "^0.0.6"
-  }
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38"
+  },
+  "browserslist": [
+    "> 0.5%",
+    "Firefox ESR",
+    "not dead"
+  ]
 }
