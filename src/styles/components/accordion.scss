@@ -19,7 +19,7 @@
         }
     }
 
-    .accordion__name {
+    &__name {
         .more {
             display: block;
         }
@@ -29,8 +29,7 @@
         }
     }
 
-    .accordion__img {
-
+    &__img {
         .plus {
             width: 16px;
             height: 17px;
@@ -46,14 +45,13 @@
         }
     }
 
-    .accordion__body {
-        overflow: hidden;
-        max-height: 0;
-        opacity: 0;
-        transition: max-height 0s ease, opacity 0.5s ease;
-        margin-bottom: 10px;
-
+    &__body {
         @include media(1100) {
+            overflow: hidden;
+            max-height: 0;
+            opacity: 0;
+            transition: max-height 0s ease, opacity 0.5s ease;
+            margin-bottom: 10px;
             transform: translateZ(0);
         }
     }
