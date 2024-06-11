@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.19",
+    "normalize.css": "^8.0.1",
     "postcss": "^8.4.38"
   },
   "browserslist": [
