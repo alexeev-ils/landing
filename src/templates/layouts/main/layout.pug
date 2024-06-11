@@ -8,6 +8,10 @@ html(lang="ru")
     script(type='module' src="/src/scripts/app.js")
     include head
   body
+    if process.env.IS_PROD === 'true'
+      noscript
+        div
+            img(src="https://mc.yandex.ru/watch/96468256" style="position:absolute; left:-9999px;" alt="")
     main.main_layout
       block content
     include footer
