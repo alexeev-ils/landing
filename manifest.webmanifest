@@ -10,43 +10,43 @@
     "background_color": "#ffffff",
     "icons": [
         {
-            "src": "/landing/favicons/16x16.png",
+            "src": "/landing/img/16x16.png",
             "sizes": "16x16",
             "type": "image/png",
             "density": 1.0
         },
         {
-            "src": "/landing/favicons/32x32.png",
+            "src": "/landing/img/32x32.png",
             "sizes": "32x32",
             "type": "image/png",
             "density": 2.0
         },
         {
-            "src": "/landing/favicons/192x192.png",
+            "src": "/landing/img/192x192.png",
             "sizes": "192x192",
             "type": "image/png",
             "density": 1.0
         },
         {
-            "src": "/landing/favicons/256x256.png",
+            "src": "/landing/img/256x256.png",
             "sizes": "256x256",
             "type": "image/png",
             "density": 1.5
         },
         {
-            "src": "/landing/favicons/384x384.png",
+            "src": "/landing/img/384x384.png",
             "sizes": "384x384",
             "type": "image/png",
             "density": 3.0
         },
         {
-            "src": "/landing/favicons/512x512.png",
+            "src": "/landing/img/512x512.png",
             "sizes": "512x512",
             "type": "image/png",
             "density": 4.0
         },
         {
-            "src": "/landing/favicons/favicon.svg",
+            "src": "/landing/img/favicon.svg",
             "sizes": "any",
             "type": "image/x-icon"
         }
