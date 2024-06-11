@@ -67,7 +67,7 @@
         line-height: 1.4;
 
         &:not(:last-child) {
-            margin-bottom: 20px;
+            margin-bottom: 16px;
 
             @include media(768) {
                 margin-bottom: 10px;
@@ -77,13 +77,9 @@
         &[data-attr="extra"] {
             font-size: 12px;
         }
-
-        &_icon {
-            margin-bottom: 10px;
-        }
     }
 
     .item:not(:last-child) {
-        margin-bottom: 10px;
+        margin-bottom: 6px;
     }
 }

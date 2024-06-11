@@ -6,7 +6,7 @@
 
 @mixin button-style() {
     width: fit-content;
-    padding: 14px 20px;
+    padding: 20px;
     color: #fff;
     background-color: #9795FF;
     border-radius: 50px;
@@ -16,6 +16,7 @@
     cursor: pointer;
     transition: background-color .3s;
     font-weight: 500;
+    font-size: 18px;
 
     &:hover {
         background-color: #8A88F1;

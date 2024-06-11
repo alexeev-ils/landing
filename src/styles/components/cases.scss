@@ -1,8 +1,8 @@
 .cases {
-    margin-bottom: 100px;
+    margin-bottom: 75px;
 
     @include media(768) {
-        margin-bottom: 70px;
+        margin-bottom: 60px;
     }
 
     @include media(480) {
@@ -46,6 +46,11 @@
 
     &__desc {
         font-size: 16px;
+        padding-right: 15px;
+
+        @include media(768) {
+            padding-right: 0;
+        }
     }
 
     &__images {

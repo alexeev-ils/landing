@@ -67,17 +67,15 @@
         font-size: 50px;
         font-weight: 700;
         color: #9795FF;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
         text-align: center;
 
         @include media(768) {
             font-size: 40px;
-            margin-bottom: 20px;
         }
 
         @include media(480) {
             font-size: 30px;
-            margin-bottom: 15px;
         }
     }
 

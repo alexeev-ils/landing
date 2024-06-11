@@ -56,14 +56,20 @@
         }
     }
 
-    &__item.tariff:not(:last-child) {
-        margin-right: 33px;
+    &__item {
+        flex: 1;
 
-        @include media(1100) {
-            margin-right: 0;
-            margin-bottom: 60px;
+        &:not(:last-child) {
+            margin-right: 33px;
+
+            @include media(1100) {
+                margin-right: 0;
+                margin-bottom: 60px;
+            }
         }
     }
+
+
 
     &__actions {
         display: flex;
